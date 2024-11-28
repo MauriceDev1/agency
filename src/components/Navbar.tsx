@@ -102,15 +102,10 @@ const Navbar = () => {
         </nav>
       </div>
 
-      {/* Dummy Scrollable Content */}
-      <div className="flex flex-wrap" style={{ width: "1000px" }}>
-        {[...Array(30)].map((_, index) => (
-          <div key={index} className="bg-orange-200 h-52 w-52 m-5"></div>
-        ))}
-      </div>
+
 
       {/* Notes */}
-      <span className="text-center font-bold my-20">
+      {/* <span className="text-center font-bold my-20">
         MDI (npm i @mdi/font) required for icons
         <hr className="my-4" />
         <a
@@ -121,7 +116,7 @@ const Navbar = () => {
         >
           Convert to SASS
         </a>
-      </span>
+      </span> */}
     </div>
   );
 };
