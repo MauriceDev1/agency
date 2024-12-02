@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Area from './area'; // Adjust the import path as necessary
 
-const Area = () => {
+const BookNowPage = () => {
   return (
-    <ul className="list-disc pl-5 space-y-2">
-      <li className="text-gray-700">Option 1</li>
-      <li className="text-gray-700">Option 2</li>
-      <li className="text-gray-700">Option 3</li>
-    </ul>
-  )
-}
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Book Now</h1>
+      <Area />
+    </div>
+  );
+};
 
-export default Area
+export default BookNowPage;
