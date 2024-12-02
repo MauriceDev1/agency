@@ -1,0 +1,30 @@
+{
+    "links": [
+      {
+        "key": "home",
+        "path": "/",
+        "label": "Home"
+      },
+      {
+        "key": "blog",
+        "path": "/blog",
+        "label": "Blog"
+      },
+      {
+        "key": "premium",
+        "path": "/premium",
+        "label": "Premium"
+      },
+      {
+        "key": "im_an_escort",
+        "path": "/im-an-escort",
+        "label": "I'm an Escort"
+      },
+      {
+        "key": "im_an_agency",
+        "path": "/im-an-agency",
+        "label": "I'm an Agency"
+      }
+    ]
+  }
+  

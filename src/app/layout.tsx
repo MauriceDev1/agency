@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <ConvexClientProvider>
           <Navbar />
-          <div className="flex flex-wrap  m-auto" style={{ width: "1500px" }}>
+          <div className="flex flex-col px-5 lg:px-0 justify-around w-full z-10 m-auto max-w-[1500px]">
             {children}
           </div>
         </ConvexClientProvider>
