@@ -2,7 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-const Area = () => {
+interface AreaProps {
+  onSubOptionSelect: (subOptionId: string | null) => void;
+}
+
+const Area: React.FC<AreaProps> = ({ onSubOptionSelect }) => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [selectedSubOption, setSelectedSubOption] = useState<string | null>(null);
   const router = useRouter();
@@ -10,10 +14,12 @@ const Area = () => {
   const handleOptionClick = (optionId: string) => {
     setSelectedOption(selectedOption === optionId ? null : optionId);
     setSelectedSubOption(null); // Reset sub-option when a new option is selected
+    onSubOptionSelect(null); // Notify parent about the reset
   };
 
   const handleSubOptionClick = (subOptionId: string) => {
     setSelectedSubOption(subOptionId);
+    onSubOptionSelect(subOptionId); // Notify parent about the selected sub-option
   };
 
   useEffect(() => {
