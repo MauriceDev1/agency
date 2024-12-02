@@ -77,7 +77,7 @@ const Navbar = () => {
             </Link>
 
             {/* Login */}
-            <Link href="/login" className="flex text-gray-600 cursor-pointer transition-colors duration-300 font-semibold text-blue-600">
+            <Link href="/login" className="flex cursor-pointer transition-colors duration-300 font-semibold text-blue-600">
               <svg
                 className="fill-current h-5 w-5 mr-2 mt-0.5"
                 xmlns="http://www.w3.org/2000/svg"
