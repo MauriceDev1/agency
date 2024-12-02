@@ -5,11 +5,6 @@ const Links = [
         link: "/book-now/area",
     },
     {
-        id: 2,
-        name:"City",
-        link:"/book-now/city"
-    },
-    {
         id: 3,
         name:"Duration",
         link:"/book-now/duration"
