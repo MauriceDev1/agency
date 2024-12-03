@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Area from './area'; // Adjust the import path as necessary
+import cityData from '@/data/city.json'; // Import the city data
 
 const BookNowPage = () => {
   const [selectedSubOption, setSelectedSubOption] = useState<string | null>(null);
@@ -19,7 +20,7 @@ const BookNowPage = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">{getHeadingText()}</h1>
-      <Area onSubOptionSelect={handleSubOptionSelect} />
+      <Area cityData={cityData} onSubOptionSelect={handleSubOptionSelect} />
       {selectedSubOption && (
         <div className="mt-4">
           <h2 className="text-xl font-semibold">Selected Sub-option: {selectedSubOption}</h2>
