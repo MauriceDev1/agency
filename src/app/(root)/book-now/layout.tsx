@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import Links from './booknow'
 
@@ -9,7 +10,7 @@ export default function Layout({
   return (
     <div className="bg-red-500 h-56">
         <div className="w-full flex justify-between">
-            {Links.map(l => <Link href={l.link} key={l.id}>{l.name}</Link>)}
+            {Links().map(l => <Link href={l.link} key={l.id}>{l.name}</Link>)}
         </div>
         {children}
     </div>
