@@ -7,9 +7,15 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="bg-red-500 h-56">
-        <div className="w-full flex justify-between">
-            {Links.map(l => <Link href={l.link} key={l.id}>{l.name}</Link>)}
+    <div className="h-56">
+        <div className="w-full flex justify-between bg-black rounded-md mb-10">
+            {Links.map(l => (
+                <Link href={l.link} key={l.id} className="h-20 flex w-full">
+                    <p className="m-auto text-white">
+                        {l.name}
+                    </p>
+                </Link>
+            ))}
         </div>
         {children}
     </div>

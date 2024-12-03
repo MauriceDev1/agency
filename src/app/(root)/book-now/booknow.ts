@@ -1,8 +1,8 @@
 const Links = [
     {
         id: 1,
-        name: "Area",
-        link: "/book-now/area",
+        name: "City",
+        link: "/book-now/city",
     },
     {
         id: 3,
