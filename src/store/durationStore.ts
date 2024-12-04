@@ -1,12 +1,12 @@
-
 import { create } from 'zustand'
 
 interface DurationState {
-  selectedDuration: string
-  setSelectedDuration: (duration: string) => void
+  selectedDuration: string | number
+  setSelectedDuration: (duration: number) => void
 }
 
 export const useDurationStore = create<DurationState>((set) => ({
   selectedDuration: 'Duration',
-  setSelectedDuration: (duration: string) => set({ selectedDuration: duration })
+  setSelectedDuration: (duration: number) => 
+    set({ selectedDuration: `${duration} hour${duration > 1 ? 's' : ''}` })
 }))

@@ -1,8 +1,12 @@
 'use client'
 import React, { useState } from 'react';
+import { useDurationStore } from '@/store/durationStore';
+import { useRouter } from 'next/navigation';
 
 const DurationSelector = () => {
   const [duration, setDuration] = useState(1);
+  const setSelectedDuration = useDurationStore((state) => state.setSelectedDuration);
+  const router = useRouter();
 
   const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setDuration(Number(event.target.value));
@@ -14,6 +18,11 @@ const DurationSelector = () => {
 
   const handleMinusButtonClick = () => {
     setDuration((prevDuration) => Math.max(1, prevDuration - 1));
+  };
+
+  const handleSetDuration = () => {
+    setSelectedDuration(duration);
+    router.push('/book-now/gender'); // Changed from '/book-now' to '/book-now/gender'
   };
 
   return (
@@ -40,8 +49,14 @@ const DurationSelector = () => {
           +
         </button>
       </div>
-      <div className="mt-4 text-center">
+      <div className="mt-4 text-center flex flex-col items-center gap-4">
         <span className="text-lg font-semibold">Duration: {duration} hour(s)</span>
+        <button
+          onClick={handleSetDuration}
+          className="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 transition-colors"
+        >
+          Set Duration
+        </button>
       </div>
     </div>
   );
